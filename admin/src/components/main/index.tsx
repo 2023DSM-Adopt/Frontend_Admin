@@ -72,6 +72,19 @@ const MainWapper = styled.div`
   display: flex;
   align-items: center;
   flex-direction: column;
+  &::-webkit-scrollbar {
+    width: 8px;
+  }
+  &::-webkit-scrollbar-thumb {
+ background-color: #1867ff;
+    border-radius: 8px;
+  }
+  &::-webkit-scrollbar-track {
+background-color: #F5F5F5;
+    border-radius: 10px;
+    border-radius: 8px;
+    box-shadow: inset 0px 0px 5px white;
+  }
 `;
 const Button = styled.button`
   display: inline-flex;
