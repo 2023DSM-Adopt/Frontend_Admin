@@ -3,67 +3,82 @@ import { Color } from "../../style/color";
 import { DetailInformation } from "../contance";
 import { useNavigate } from "react-router-dom";
 
-export const Detail = () =>{
-
+export const Detail = () => {
   const navigate = useNavigate();
-    const detailData = DetailInformation;
+  const detailData = DetailInformation;
 
-    return(
-        <Background>
-            <ApplicationInfoFlex>
-                <ApplicationTitle>입양신청자 정보</ApplicationTitle>
-                <Graph>
-                    <GraphFlex>
-                        <Name>입양자 이름</Name>
-                        <DataStyle>김이박</DataStyle>
-                        <PhoneNumber>휴대전화</PhoneNumber>
-                        <DataStyle>01012345678</DataStyle>
-                    </GraphFlex>
-                    <GraphFlex>
-                        <Name>입양 예정 일/시</Name>
-                        <DataStyle>2023-5-17 13:00</DataStyle>
-                    </GraphFlex>
-                    <GraphFlex>
-                        <Name>신청 제목</Name>
-                        <DataStyle>입양하고 싶습니다.</DataStyle>
-                    </GraphFlex>
-                    <GraphFlex>
-                        <Name>작성일</Name>
-                        <DataStyle>2023-5-12</DataStyle>
-                    </GraphFlex>
-                    <GraphFlex>
-                        <Content>내용</Content>
-                        <ContentFlex>
-                            <div>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin molestie porta augue, sed vehicula augue vehicula in. Etiam sit amet interdum est. Nulla vitae dui aliquam, convallis elit a, malesuada felis. Pellentesque suscipit ex ac hendrerit laoreet. Aenean vel cursus ipsum. Sed laoreet consequat venenatis. Donec ut vestibulum risus. Duis a quam vel orci laoreet hendrerit eu sit amet orci. Phasellus ornare ipsum vel odio volutpat, sit amet convallis diam tristique. Praesent felis velit, ornare ac nibh vitae, ornare cursus augue. Duis neque lacus, commodo volutpat ante quis, convallis convallis enim. Vestibulum quis neque consectetur, varius eros vel, luctus velit.</div>
-                        </ContentFlex>
-                    </GraphFlex>
-                </Graph>
-            </ApplicationInfoFlex>
-            <PetInformationFlex>
-                <Flex>
-                    <PetImg src="/assets/img/DetailImg.svg"/>
-                    <FlexFlex>
-                        {
-                            detailData.map((data, index) => (
-                                <InfoFlex key={index}>
-                                    <InfoBold>{data.bold}</InfoBold>
-                                    <InfoMidum>{data.medium}</InfoMidum>
-                                </InfoFlex>
-                            ))
-                        }
-                    </FlexFlex>
-                </Flex>
-            </PetInformationFlex>
-            <BtnFlex>
-                <ApplyBtn onClick={()=>{navigate("/main")}} >수락하기</ApplyBtn>
-            </BtnFlex>
-        </Background>
-    );
-}
+  return (
+    <Background>
+      <ApplicationInfoFlex>
+        <ApplicationTitle>입양신청자 정보</ApplicationTitle>
+        <Graph>
+          <GraphFlex>
+            <Name>입양자 이름</Name>
+            <DataStyle>김이박</DataStyle>
+            <PhoneNumber>휴대전화</PhoneNumber>
+            <DataStyle>01012345678</DataStyle>
+          </GraphFlex>
+          <GraphFlex>
+            <Name>입양 예정 일/시</Name>
+            <DataStyle>2023-5-17 13:00</DataStyle>
+          </GraphFlex>
+          <GraphFlex>
+            <Name>신청 제목</Name>
+            <DataStyle>입양하고 싶습니다.</DataStyle>
+          </GraphFlex>
+          <GraphFlex>
+            <Name>작성일</Name>
+            <DataStyle>2023-5-12</DataStyle>
+          </GraphFlex>
+          <GraphFlex>
+            <Content>내용</Content>
+            <ContentFlex>
+              <div>
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin
+                molestie porta augue, sed vehicula augue vehicula in. Etiam sit
+                amet interdum est. Nulla vitae dui aliquam, convallis elit a,
+                malesuada felis. Pellentesque suscipit ex ac hendrerit laoreet.
+                Aenean vel cursus ipsum. Sed laoreet consequat venenatis. Donec
+                ut vestibulum risus. Duis a quam vel orci laoreet hendrerit eu
+                sit amet orci. Phasellus ornare ipsum vel odio volutpat, sit
+                amet convallis diam tristique. Praesent felis velit, ornare ac
+                nibh vitae, ornare cursus augue. Duis neque lacus, commodo
+                volutpat ante quis, convallis convallis enim. Vestibulum quis
+                neque consectetur, varius eros vel, luctus velit.
+              </div>
+            </ContentFlex>
+          </GraphFlex>
+        </Graph>
+      </ApplicationInfoFlex>
+      <PetInformationFlex>
+        <Flex>
+          <PetImg src="/assets/img/DetailImg.svg" />
+          <FlexFlex>
+            {detailData.map((data, index) => (
+              <InfoFlex key={index}>
+                <InfoBold>{data.bold}</InfoBold>
+                <InfoMidum>{data.medium}</InfoMidum>
+              </InfoFlex>
+            ))}
+          </FlexFlex>
+        </Flex>
+      </PetInformationFlex>
+      <BtnFlex>
+        <ApplyBtn
+          onClick={() => {
+            navigate("/main");
+          }}
+        >
+          수락하기
+        </ApplyBtn>
+      </BtnFlex>
+    </Background>
+  );
+};
 
 const DataStyle = styled.div`
-    padding-left: 20px;
-    font-size: 18px;
+  padding-left: 20px;
+  font-size: 18px;
 `;
 
 const Background = styled.div`
