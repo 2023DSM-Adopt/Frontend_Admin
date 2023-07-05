@@ -4,6 +4,7 @@ import MainPage from "./pages/main";
 import EnterInformationPage from "./pages/enterInformation";
 import "./App.css";
 import { DetailPage } from "./pages/detail/inedex";
+import TimeSettingPage from "./pages/timeSetting";
 function App() {
   return (
     <BrowserRouter>
@@ -12,6 +13,7 @@ function App() {
           <Route path="main" element={<MainPage />} />
           <Route path="detail" element={<DetailPage />} />
           <Route path="enterInformation" element={<EnterInformationPage />} />
+          <Route path="timeSetting" element={<TimeSettingPage />} />
         </Route>
       </Routes>
     </BrowserRouter>
