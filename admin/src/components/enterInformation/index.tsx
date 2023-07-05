@@ -4,6 +4,7 @@ import { genderDropDownItem, stateDropDownItem } from "../../constant";
 import Dropdown from "../common/dropDown";
 import { useNavigate } from "react-router-dom";
 
+
 const EnterInformation = () => {
 
   const [selectedOption, setSelectedOption] = useState("");
