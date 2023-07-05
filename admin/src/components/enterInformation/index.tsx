@@ -91,7 +91,7 @@ const EnterInformation = () => {
           </ListWrapper>
           <SubLine />
         </InformationWrapper>
-        <Button>다음</Button>
+        <Button onClick={()=>{navigate("/timeSetting")}} >다음</Button>
       </Information>
     </>
   );
@@ -110,6 +110,10 @@ margin-top: 40px;
 color: var(--c-white, #FFF);
 font-size: 20px;
 font-weight: 700;
+&:hover {
+    filter: brightness(1.25);
+    transition: all 0.3s;
+  }
 `
 const InformationInput=styled.input`
 width: 492px;

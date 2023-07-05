@@ -1,4 +1,5 @@
 import styled from "styled-components";
+import { useNavigate } from "react-router-dom";
 
 interface Props {
   name: string;
@@ -6,8 +7,10 @@ interface Props {
   date_created: string;
 }
 const List = ({ name, title, date_created }: Props) => {
+  
+  const navigate = useNavigate();
   return (
-    <ListWrapper>
+    <ListWrapper onClick={()=>{navigate("/detail")}}>
       <p>{title}</p>
       <p>{name}</p>
       <p>{date_created}</p>

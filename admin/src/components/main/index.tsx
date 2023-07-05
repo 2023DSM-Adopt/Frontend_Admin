@@ -1,13 +1,16 @@
 import styled from "styled-components";
 import { AdoptionList } from "../contance";
 import List from "./list";
+import { useNavigate } from "react-router-dom";
 
 const Main = () => {
+
+  const navigate = useNavigate();
   return (
     <MainWapper>
       <Headers>
         <MainTitle>입양 신청 목록</MainTitle>
-        <Button>공고 등록</Button>
+        <Button onClick={()=>{navigate("/enterInformation")}}>공고 등록</Button>
       </Headers>
       <Line />
       <TitleRow>

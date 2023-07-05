@@ -1,9 +1,11 @@
 import { styled } from "styled-components";
 import { Color } from "../../style/color";
 import { DetailInformation } from "../contance";
+import { useNavigate } from "react-router-dom";
 
 export const Detail = () =>{
 
+  const navigate = useNavigate();
     const detailData = DetailInformation;
 
     return(
@@ -53,7 +55,7 @@ export const Detail = () =>{
                 </Flex>
             </PetInformationFlex>
             <BtnFlex>
-                <ApplyBtn>수락하기</ApplyBtn>
+                <ApplyBtn onClick={()=>{navigate("/main")}} >수락하기</ApplyBtn>
             </BtnFlex>
         </Background>
     );
