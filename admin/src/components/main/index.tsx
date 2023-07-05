@@ -1,5 +1,5 @@
 import styled from "styled-components";
-import { AdoptionList } from "../../contance";
+import { AdoptionList } from "../contance";
 import List from "./list";
 
 const Main = () => {
@@ -72,6 +72,7 @@ const MainWapper = styled.div`
   display: flex;
   align-items: center;
   flex-direction: column;
+  margin-bottom: 100px;
 `;
 const Button = styled.button`
   display: inline-flex;

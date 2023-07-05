@@ -1,4 +1,4 @@
-import Main from "../../main"
+import Main from "../../components/main"
 
 const MainPage=()=>{
     return(
