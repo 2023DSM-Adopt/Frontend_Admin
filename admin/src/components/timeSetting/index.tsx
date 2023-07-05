@@ -1,7 +1,7 @@
 import styled from "styled-components";
 import { useState } from "react";
 import { useNavigate } from "react-router-dom";
-import Calendar from "react-calendar/dist/cjs/Calendar";
+import { Calender } from "../common/calender";
 
 const TimeSetting = () => {
   const [selectedOption, setSelectedOption] = useState("");
@@ -21,7 +21,7 @@ const TimeSetting = () => {
         <Title>공고 기간 설정</Title>
         <Line />
         <StartText>공고 시작일</StartText>
-        <Calendar/>
+        <Calender/>
       </TimeWrapper>
       <TimeWrapper>
         <Title>입양 기간 설정</Title>
