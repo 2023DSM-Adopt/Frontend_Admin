@@ -6,6 +6,8 @@ import { Calender } from "../common/calender";
 const TimeSetting = () => {
   const [selectedOption, setSelectedOption] = useState("");
   const navigate = useNavigate();
+  const img_url = localStorage.getItem("img");
+  console.log(img_url);
 
   const handleDropdownOption = (option: string) => {
     setSelectedOption(option);
@@ -14,8 +16,7 @@ const TimeSetting = () => {
   return (
     <Wrapper>
       <Form>
-        <PhotoLabel htmlFor="profileImg">이미지를 업로드 해주세요</PhotoLabel>
-        <Photofile type="file" id="profileImg" accept="image/*" />
+        <img width={500} src="/assets/img/dog/Dog1.jpeg"/>
       </Form>
       <TimeWrapper>
         <Title>공고 기간 설정</Title>
@@ -129,7 +130,6 @@ const Form = styled.form`
   height: 358px;
   flex-shrink: 0;
   border-radius: 10px;
-  background: var(--c-main, #1867ff);
   margin-top: 46px;
   align-items: center;
   display: flex;

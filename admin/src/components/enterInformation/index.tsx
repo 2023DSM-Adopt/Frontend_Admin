@@ -8,11 +8,27 @@ import { useNavigate } from "react-router-dom";
 const EnterInformation = () => {
 
   const [selectedOption, setSelectedOption] = useState("");
+  const [imgView, setImgView] = useState<string>('');
   const navigate = useNavigate();
 
   const handleDropdownOption = (option: string) => {
     setSelectedOption(option);
   };
+
+  const handleImgValue = async(e:any) =>{
+    const fileList = e.target.files as FileList;
+    const theFile = fileList[0];
+
+    const reader = new FileReader();
+    reader.onloadend = (finishedEvent) => {
+      const {
+        currentTarget: { result },
+      }: any = finishedEvent;
+
+      setImgView(result);
+    };
+    await reader.readAsDataURL(theFile);
+  }
 
 
   return (
@@ -22,7 +38,8 @@ const EnterInformation = () => {
           <PhotoLabel htmlFor="profileImg" >
            이미지를 업로드 해주세요
           </PhotoLabel>
-          <Photofile type="file" id="profileImg" accept="image/*" />
+          <Photofile type="file" id="profileImg" accept="image/*" onChange={handleImgValue}/>
+          <img src={imgView}/>
         </Form>
         <InformationWrapper>
           <Title>정보 입력</Title>
@@ -91,7 +108,10 @@ const EnterInformation = () => {
           </ListWrapper>
           <SubLine />
         </InformationWrapper>
-        <Button onClick={()=>{navigate("/timeSetting")}} >다음</Button>
+        <Button onClick={()=>{
+          localStorage.setItem("img", imgView)
+          navigate("/timeSetting")
+        }} >다음</Button>
       </Information>
     </>
   );
@@ -179,8 +199,8 @@ margin-right: 560px;
 const InformationWrapper=styled.div`
   
 `
-const Form = styled.form`
-width: 690px;
+const Form = styled.div`
+width: 500px;
 height: 358px;
 flex-shrink: 0;
 border-radius: 10px;
@@ -189,7 +209,10 @@ margin-top: 46px;
 align-items: center;
 display: flex;
 justify-content: center;
-
+&>img{
+  width: 500px;
+  position: absolute;
+}
 `;
 
 const PhotoLabel = styled.label`

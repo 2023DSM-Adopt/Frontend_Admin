@@ -1,5 +1,5 @@
 export const AdoptionList = [
-  { name: "김한비", title: "입양 하겠습니다", date_created: "2023-1-2" },
+  { name: "김이박", title: "입양 하겠습니다", date_created: "2023-7-5" },
   { name: "강진현", title: "입양 하겠습니다", date_created: "2023-9-24" },
   { name: "오상우", title: "입양 하겠습니다", date_created: "2023-4-24" },
   { name: "김민재", title: "입양 하겠습니다", date_created: "2023-9-11" },
@@ -128,7 +128,7 @@ export const DetailInformation = [
   },
   {
     bold: "품종",
-    medium: "웰시코기",
+    medium: "믹스",
   },
   {
     bold: "입양 상태",
@@ -140,7 +140,7 @@ export const DetailInformation = [
   },
   {
     bold: "지역 분류",
-    medium: "충청남도 논산시 시민로 258번길 9",
+    medium: "대전광역시",
   },
   {
     bold: "관리 번호",

@@ -20,7 +20,7 @@ export const Detail = () => {
           </GraphFlex>
           <GraphFlex>
             <Name>입양 예정 일/시</Name>
-            <DataStyle>2023-5-17 13:00</DataStyle>
+            <DataStyle>2023-7-6 13:00</DataStyle>
           </GraphFlex>
           <GraphFlex>
             <Name>신청 제목</Name>
@@ -28,23 +28,13 @@ export const Detail = () => {
           </GraphFlex>
           <GraphFlex>
             <Name>작성일</Name>
-            <DataStyle>2023-5-12</DataStyle>
+            <DataStyle>2023-7-5</DataStyle>
           </GraphFlex>
           <GraphFlex>
             <Content>내용</Content>
             <ContentFlex>
               <div>
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin
-                molestie porta augue, sed vehicula augue vehicula in. Etiam sit
-                amet interdum est. Nulla vitae dui aliquam, convallis elit a,
-                malesuada felis. Pellentesque suscipit ex ac hendrerit laoreet.
-                Aenean vel cursus ipsum. Sed laoreet consequat venenatis. Donec
-                ut vestibulum risus. Duis a quam vel orci laoreet hendrerit eu
-                sit amet orci. Phasellus ornare ipsum vel odio volutpat, sit
-                amet convallis diam tristique. Praesent felis velit, ornare ac
-                nibh vitae, ornare cursus augue. Duis neque lacus, commodo
-                volutpat ante quis, convallis convallis enim. Vestibulum quis
-                neque consectetur, varius eros vel, luctus velit.
+                이 아이를 데려가면 저는 엄청난 보호자가 될 수 있습니다.
               </div>
             </ContentFlex>
           </GraphFlex>
@@ -52,7 +42,7 @@ export const Detail = () => {
       </ApplicationInfoFlex>
       <PetInformationFlex>
         <Flex>
-          <PetImg src="/assets/img/DetailImg.svg" />
+          <PetImg src="/assets/img/dog/DetailImg.svg" />
           <FlexFlex>
             {detailData.map((data, index) => (
               <InfoFlex key={index}>
